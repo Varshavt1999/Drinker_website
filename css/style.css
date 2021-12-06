@@ -1,0 +1,673 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    /* overflow-x: hidden; */
+} 
+ol, ul{
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #000;
+	min-width: 320px;
+	font-weight: 500;
+}
+body #body-container{
+    background: url(../images/body_bg.png);
+    background-position:center;
+    z-index: 1;
+    transform-origin: top right;
+    overflow: hidden;
+    transition: transform 0.5s linear; 
+}
+input,textarea,select{
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-weight: 500;
+}
+
+a{
+	color: #000;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+	font-family: "GT-Eesti", Arial;
+	font-weight: 500;
+	color: #000;
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 78%;
+	margin: 0 auto;
+	max-width:1200px;
+}
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+#spotlight{
+    /* background-image: url(../images/midil.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 20%; */
+    border-bottom: 1px solid #000000;
+    overflow: hidden;
+}
+#spotlight header{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px ;
+}
+#spotlight header h1{
+    width: 120px;
+}
+#spotlight header h1 a{
+    width: 100%;
+    display: inline-block;
+}
+#spotlight header h1 a img{
+    display: block;
+    width: 100%;
+}
+#spotlight header ul.nav{
+    display: flex;
+    justify-content: center;
+    width: 16%;
+    z-index: 1;
+}
+#spotlight header ul.nav li{
+    margin-right: 38px;
+}
+#spotlight header ul.nav li:last-child{
+    margin-right: 0;
+}
+#spotlight header ul.nav li a{
+    width: 100%;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    transition: transform 0.5s ease;
+}
+#spotlight header ul.nav li a:hover{
+    transform: scale(1.1);
+    font-weight: 600;
+    border-bottom: 1px solid #fff;
+}
+#spotlight header div.hamburger{
+    display: none;
+    margin-left: auto;
+    margin-right: 10px;
+}
+#spotlight header div.hamburger .zmdi.zmdi-menu {
+    font-size: 22px;
+    font-weight: 600;
+}
+#spotlight header div.close{
+    display: none;
+}
+#spotlight header div.close .zmdi.zmdi-close{
+    font-size: 22px;
+    font-weight: 600;
+}
+ul.menu{
+    background-color: #000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 600px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 80px;
+    align-items: center;
+    transition: 0.5s ease-in;
+    z-index: -1;
+    /* transition: all 0.5s ease-in-out;
+    transform: rotate(-25deg); 
+    transform-origin: top right;    */
+}
+ul.menu li{
+    margin-bottom: 20px;
+
+}
+ul.menu li a{
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+}
+#spotlight header div.bg-img{
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+#spotlight header div.bg-img img{
+    width: 100%;
+    display: block;
+}
+ 
+#spotlight #home{
+    padding: 30px 0 7% ;
+}
+#spotlight #home div.container{
+    text-align: center;
+}
+#spotlight #home div.container div.bottle-image{
+    width: 80%;
+    margin: 0 auto 15px;
+}
+#spotlight #home div.container div.bottle-image img{
+    display: block;
+    width: 100%;
+}
+#spotlight #home div.container h2{
+    font-size:44px;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+#spotlight #home div.container p.read-more{
+    font-size: 18px;
+    margin-bottom: 30px;
+    display: none;
+}
+#spotlight #home div.container p.active{
+    display: block;
+}
+#spotlight #home div.container a.read-button{
+    background: #1d1c1d;
+    padding: 18px 52px;
+    color: #fff;
+    text-transform: capitalize;
+    display: inline-block;  
+}
+
+#wine_list{
+    border-bottom: 1px solid #000000;
+}
+#wine_list section.wrapper{
+    padding: 7% 0;
+    text-align: center;
+}
+#wine_list h2{
+    font-size:44px;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+#wine_list h2 a{
+    font-size:44px;
+    font-weight: 800;
+    text-transform: capitalize;
+    display: inline-block;
+    color: #ed3833;
+}
+#wine_list p{
+    color: #7c7c7c;
+    font-weight: 500;
+    margin-bottom: 42px;
+    font-size:16px;
+}
+#wine_list div.container{
+
+}
+#wine_list div.container div.item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+#wine_list div.container div.item:last-child{
+    margin-bottom: 0;
+}
+#wine_list div.container div.item div.left-image{
+    width: 34%;
+    height: 34%;
+    box-shadow:0px 0px 12px -6px rgb(46 50 50 / 66%);
+}
+#wine_list div.container div.item div.left-image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#wine_list div.container div.item  div.right{
+    width: 63%;
+    text-align: left;
+    padding-top: 40px;
+}
+#wine_list div.container div.item  div.right h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#wine_list div.container div.item  div.right p{
+    font-weight: 500;
+    font-size:16px;
+}
+#wine_list div.container div.item  div.right a.button{
+    font-weight: 600;
+    color: #323232;
+}
+
+#about{
+    padding: 5% 0 7%;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+#about h3{
+    font-size: 46px;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+#about h3 a{
+    font-size:44px;
+    font-weight: 800;
+    text-transform: capitalize;
+    display: inline-block;
+    color: #ed3833;
+}
+#about p{
+    font-size:16px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #7c7c7c;
+}
+#about a.button{
+    background: #1d1c1d;
+    padding: 18px 52px;
+    color: #fff;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+#testimonial{
+    padding: 5% 0;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+#testimonial h3{
+    font-size: 46px;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+#testimonial p{
+    color: #7c7c7c;
+    margin-bottom: 60px;
+    font-size:16px;
+}
+#testimonial div.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#testimonial div.container a{
+    display: inline-block;
+}
+#testimonial div.container a.left-arrow{
+    background-color: #ed3833;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+#testimonial div.container a.left-arrow i{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 900;
+}
+#testimonial div.container div.content-box{
+    display: flex;
+    justify-content: space-between;
+    width: 72%;
+    flex-wrap: wrap;
+}
+#testimonial div.container div.content-box div.left-image{
+    width: 27%;
+}
+#testimonial div.container div.content-box div.left-image img{
+    display: block;
+    width: 100%;
+}
+#testimonial div.container div.content-box div.right-content{
+    width: 70%;
+    text-align: left;
+}
+#testimonial div.container div.content-box div.right-content h4{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#testimonial div.container div.content-box div.right-content p{
+
+}
+#testimonial div.container  a.right-arrow{
+    background-color: #ed3833;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+#testimonial div.container  a.right-arrow i{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+#details{
+    
+}
+#details div.top-container{
+    padding: 8% 0;
+    border-bottom: 1px solid #000000;
+}
+#details div.top-container section.wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#details div.top-container div.left{
+    width: 45%;
+}
+#details div.top-container div.left h3{
+    font-size: 32px;
+    font-weight: 700;
+}
+#details div.top-container div.left p{
+    color: #7c7c7c;
+    margin-bottom: 60px;
+    font-size:16px;
+}
+#details div.top-container div.right{
+    width: 45%;
+}
+#details div.top-container div.right form{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#details div.top-container div.right form input{
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    padding: 30px 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background: transparent;
+}
+#details div.top-container div.right form textarea{
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 45px ;
+    margin-bottom: 50px;
+    background: transparent;
+}
+#details div.top-container div.right form button{
+    background: #1d1c1d;
+    padding: 18px 64px;
+    color: #fff;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+#details footer{
+    padding: 30px 0;
+    text-align: center; 
+}
+#details footer p{
+    font-weight: 600;
+    color: #323232;
+}
+
+@media all and (max-width:1280px){
+    #spotlight header div.bg-img{
+        width: 22%;
+    }
+    #spotlight #home div.container h2{
+        font-size: 40px;
+    }
+}
+@media all and (max-width:1080px){
+   
+}
+@media all and (max-width:980px){
+    #spotlight header ul.nav{
+        width: 22%;
+    }
+    #spotlight header ul.nav li{
+        margin-right: 16px;
+    }
+    #spotlight header div.bg-img{
+        width: 30%;
+    }
+    #spotlight #home div.container h2{
+        font-size: 38px;
+    }
+    #wine_list h2{
+        font-size: 38px;
+    }
+    #wine_list h2 a{
+        font-size: 38px;
+    }
+    #wine_list div.container div.item div.right p{
+        margin-bottom: 18px;
+    }
+    #about h3{
+        font-size: 38px;
+    }
+    #about h3 a{
+        font-size: 38px;
+    }
+    #wine_list div.container div.item div.right{
+        padding-top: 0;
+    }
+    #testimonial h3{
+        font-size: 38px;
+    }
+    #details div.top-container div.left h3{
+        font-size: 28px;
+    }
+    #testimonial div.container a.left-arrow{
+        width: 60px;
+        height: 60px;
+    }
+    #testimonial div.container a.right-arrow{
+        width: 60px;
+        height: 60px;
+    }
+}
+@media all and (max-width:768px){
+    #spotlight{
+        background-size: 29%;
+    }
+    #spotlight header div.hamburger{
+        display: block;
+        z-index: 2;
+    }
+    #body-container.active{
+        transform: rotate(25deg);
+        transform-origin: top right;
+        overflow: hidden;
+        transition: transform 1s ;
+        /* animation: movement 1s; */
+        /* transition: ease 0.75s; */
+    }
+    /* @keyframes movement{
+        0%{
+            transform: rotate(0);
+            transform-origin: top right;
+        }
+        100%{
+            transform: rotate(25deg);
+            transform-origin: top right;
+        }
+    } */
+
+    #spotlight header ul.nav{
+        display: none;
+    }
+    #spotlight header div.close.active{
+        display: block;
+        z-index: 2;
+    }
+    #spotlight header ul.menu.active{
+        display: flex;
+        transform: rotate(-25deg);
+        transform-origin: top right;
+        transition: transform 0.5s ease 0.5s; 
+        z-index: -1; 
+    }
+    #spotlight header div.hamburger.active{
+        display: none;
+    }
+    #spotlight header div.close.active{
+        display: block;
+    }
+    #spotlight #home div.container h2{
+        font-size: 34px;
+    }
+    #spotlight #home div.container a.read-button{
+        padding: 14px 40px;
+    }
+    #wine_list div.container div.item div.right h3{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    #about a.button{
+        padding: 14px 40px;
+    }
+    #details div.top-container div.left{
+        width: 100%;
+    }
+    #details div.top-container div.right{
+        width: 100%;
+    }
+    #details div.top-container div.left p{
+        margin-bottom: 30px;
+    }
+}
+@media all and (max-width:640px){
+    #spotlight #home div.container h2{
+        font-size: 30px;
+    }
+    #wine_list h2{
+        font-size: 32px;
+    }
+    #wine_list h2 a{
+        font-size: 32px;
+    }
+    #wine_list div.container div.item div.left-image{
+        margin: 0 auto 20px;
+        width: 50%;
+        height: 50%;
+    }
+    #wine_list div.container div.item div.right{
+        width: 100%;
+        text-align: center;
+    }
+    #about h3{
+        font-size: 32px;
+    }
+    #about h3 a{
+        font-size: 32px;
+    }
+    #testimonial h3{
+        font-size: 32px;
+    }
+    #testimonial p{
+        max-width: 90%;
+        margin: 0 auto 30px;
+    }
+    #testimonial div.container div.content-box div.right-content{
+        width: 100%;
+        text-align: center;
+    }
+    #testimonial div.container div.content-box div.left-image{
+        margin: 0 auto;
+    }
+}
+@media all and (max-width:480px){
+    #spotlight header ul.menu{
+        height: 500px;
+    }
+    #spotlight #home div.container h2{
+        font-size: 26px;
+    }
+    #spotlight #home div.container a.read-button {
+        padding: 10px 20px;
+    }
+    #wine_list h2{
+        font-size: 26px;
+    }
+    #wine_list h2 a{
+        font-size: 26px;
+    }
+    #wine_list p{
+        font-size: 15px;
+    }
+    #wine_list div.container div.item div.right p{
+        font-size: 15px;
+    }
+    #wine_list div.container div.item div.right h3{
+        font-size: 20px;
+    }
+    #about h3{
+        font-size: 26px;
+    }
+    #about h3 a{
+        font-size: 26px;
+    }
+    #details div.top-container div.right form button{
+        padding: 14px 50px;
+    }
+    #details footer p{
+        font-size: 10px;
+    }
+    #testimonial h3{
+        font-size: 26px;
+    }
+    #details div.top-container div.left h3{
+        font-size: 26px;
+    }
+}
+@media all and(max-width:360px){
+
+}
+@media all and(max-width:320px){
+
+}
